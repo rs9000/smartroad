@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it" >
+
+<head>
+    <title>SmartRoad</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+      <!-- ViewPort per adattare la risoluzione a tutti i dispositivi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+	 <!-- Librerie -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="cordova.js"></script>
+    <script defer src="js/material.min.js"></script>
+    <script src="xdk/init-dev.js"></script>
+
+ 	<!-- Mio Javascript dell'applicazione-->
+    <script src="js/app.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.blue_grey-red.min.css" />
+    
+    <link href='css/roboto.css' rel='stylesheet' type='text/css'>
+    
+
+</head>
+
+<body>
+
+     <!-- Header-->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">SmartRoad</span>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+
+       <!-- Menu laterale -->
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title" style="background-color:#607d8b">
+           <img id="drawPic" style="width:30%;margin:10%;margin-left:5%;" class="circular" src="" alt="Smiley face">
+            <p id="userTxt" class="userTxt" >Rosario(Rs)</p>
+        </span>
+        <div class="drawer-box">
+            <p onclick="change_subpage('sub_home')" class="drawerTxt"> <i class="material-icons" style='vertical-align:-28%;margin-right:10%;'>home</i>Home</p>
+        </div>
+        <div class="drawer-box">
+            <p onclick="change_subpage('sub_messaggi')" class="drawerTxt"> <i class="material-icons" style='vertical-align:-28%;margin-right:10%;'>message</i>Mie note</p>
+        </div>
+         <div class="drawer-box">
+            <p onclick="change_subpage('sub_options')" class="drawerTxt"> <i class="material-icons" style='vertical-align:-28%;margin-right:10%;'>settings</i> Opzioni</p>
+        </div>
+        <div class="drawer-box">
+            <p onclick="logOut()" class="drawerTxt" > <i class="material-icons" style='vertical-align:-28%;margin-right:10%;'>exit_to_app</i> Log-Out</p>
+        </div>
+      </div>
+
+       <!-- Pagina principale -->
+      <main class="mdl-layout__content" style="width:100%;background-image: url('img/bg.jpg');">
+          <div class="page-content" >
+              
+
+            <!-- CONTENUTO PAGINA -->
+            <!-- Viene caricato dinamicamente dai file sub_nomepagina.html -->
+            <div id="subpage">
+            </div>
+
+     </div>
+  </main>
+</div>
+
+
+</body>
+
+
+
+</html>

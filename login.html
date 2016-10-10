@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it" >
+
+<head>
+    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+   <!-- ViewPort per adattare la risoluzione a tutti i dispositivi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+     <!-- Librerie -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="cordova.js"></script>
+    <script defer src="js/material.min.js"></script>
+    <script src="xdk/init-dev.js"></script>
+
+    <!-- Mio Javascript per la gestione del Login-->
+    <script src="js/login.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.blue_grey-red.min.css" />
+    <link href='css/roboto.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body style="background-image: url('img/bg.jpg');">
+
+	   <!-- Pagina di Login -->
+       <section id="v_login">
+            <img style="width:80%; margin:10%;" src="img/logo.png">
+            <div  class="mdl-card mdl-shadow--6dp" style="margin:auto; margin-bottom:10%;">
+            <div class="mdl-card__supporting-text">
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="l_username" />
+                            <label class="mdl-textfield__label" for="username">Username</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="password" id="l_userpass" />
+                            <label class="mdl-textfield__label" for="userpass">Password</label>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <button style="margin:40%; margin-top:0%; margin-bottom:5%;" onclick="login()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Login</button><br>
+            <center><a onclick="goRegister()">Non hai un account? Registrati adesso.</a></center>
+        </section>
+
+		<!-- Pagina di Registrazione -->
+        <section id="v_register">
+            <img style="width:80%; margin:10%;margin-top:20%;" src="img/txtlogo.png">
+            <div  class="mdl-card mdl-shadow--6dp" style="margin:auto; margin-top:10%; margin-bottom:10%;">
+            <div class="mdl-card__supporting-text">
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="r_name" />
+                            <label class="mdl-textfield__label" for="username">Nome e cognome</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="r_username" />
+                            <label class="mdl-textfield__label" for="username">Email</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="password" id="r_userpass" />
+                            <label class="mdl-textfield__label" for="userpass">Password</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+           <center> <button style="margin-top:0%; margin-bottom:5%;" onclick="register()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Registrati</button><br></center>
+            <center><a onclick="goLogin()">Torna alla pagina di login</a></center>
+        </section>
+
+	</body>
+</html>

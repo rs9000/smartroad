@@ -1,0 +1,73 @@
+<div class="messageBox">
+    <div class="message-header1">
+        <img class="circular" src="img/avatar.png" alt="Smiley face">
+    </div>
+    <div class="message-header2">
+        <p id="msg_user" style="color:black,font-family: 'Roboto', sans-serif; font-size:large; margin-top:10%">Info User</p>
+    </div>
+    <div style="display:block;position:relative; float:left; width: 100%;height: 1px; background-color:red;z-index:9;"> </div>
+    <div class="message-body">
+        <p id="homeNote" class="label2">Nessun messaggio nei pressi di questa posizione.<br> Lascia il primo messaggio del posto! <br>Clicca sul pulsante microfono.</p>
+    </div>
+    <div class="message-footer">
+        <img style="width:10%; display: inline;margin-left:7%;" src="img/block.png" ><p id="block" class="blockTxt">Block this user</p>
+        <img style="width:10%; display: inline;" src="img/up.png" ><p id="up" class="upDown">100</p> 
+        <img style="width:10%; display: inline;" src="img/down.png"><p id="down" class="upDown">100</p> 
+    </div>
+</div>
+
+<p class="label1" id="lat">Latitudine: 0</p>
+<p class="label1" id="long">Longitudine: 0</p>
+<p class="label1" id="speed">Velocità: 0 km/h</p>
+<p class="label1" id="accY">Oscillazioni strada: 0 m/s²</p>
+
+
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onclick="rec();" style="margin-left:25%;margin-top:8%;">
+    <i class="material-icons">keyboard_voice</i>
+</button>
+   
+<button id="show-toast" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" onclick="postData()" style="margin-left:25%;margin-top:8%;">
+  <i class="material-icons">backup</i>
+</button>
+    
+
+<div style="width:65%;margin:auto;margin-top:5%;">
+    
+     <p style="display:inline" id="cat_text"> Pubblica in: Altro</p>
+   
+  
+     <button  onclick="setCategory(4)"  id="voice_cat" class="mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons">edit</i>
+    </button>
+
+<!--
+   <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+        data-mdl-for="voice_cat">
+     
+    </ul> !-->
+    
+    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+    data-mdl-for="voice_cat">
+  <li onclick="setCategory(4)" class="mdl-menu__item">Altro</li>
+      <li onclick="setCategory(1)" class="mdl-menu__item">Punti di interesse</li>
+      <li onclick="setCategory(2)" class="mdl-menu__item">Informazioni commerciali</li>
+      <li onclick="setCategory(3)" class="mdl-menu__item">Sicurezza</li>
+</ul>
+    
+<script>
+    componentHandler.upgradeDom();
+ </script>
+
+    
+    
+</div>
+    
+
+<div id="toast" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
+</div>
+    
+
+
+
